@@ -14,6 +14,6 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.config = {
-  name: "devamet",
-  aliases: ['devamet']
+  name: "devam",
+  aliases: ['devam']
 }
