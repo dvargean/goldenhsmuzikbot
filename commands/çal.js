@@ -31,6 +31,6 @@ if(playing){
 }
   
 module.exports.config = {
-  name: "oynat",
-  aliases: ['oynat']
+  name: "çal",
+  aliases: ['oynat','çal']
 }
