@@ -14,6 +14,6 @@ client.player.setRepeatMode(message.guild.id, true);
 }
 
 module.exports.config = {
-  name: "tekraret",
-  aliases: ['tekraret']
+  name: "tekrar",
+  aliases: ['tekrar']
 }
