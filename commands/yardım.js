@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args, prefix) => {
   
 const exampleEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
-        .setTitle(`Komutlarımız **${client.user.username}** BOT!`)
+        .setTitle(`Komutlarımız **${client.user.username}**`)
         .setDescription(`${client.commands.map(c => c.config.name)}`)
 	.setTimestamp()
 
