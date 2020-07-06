@@ -27,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
         
     let pull = require(`./commands/${f}`);
    
-    client.commands.set(pull.config.name, pull);  
+    client.commands.set(pull.config.name, pull);
     pull.config.aliases.forEach(alias => {
     client.aliases.set(alias, pull.config.name)
                 
@@ -40,8 +40,11 @@ client.on("ready", () => {
     //It will count all voice channels in which bot is connected, if none it will return 0
     let playing = client.voice.connections.size; 
     //It will set the bot status to streaming
-    client.user.setPresence({ activity: { name: `!yardım`, type: "STREAMING", url: "https://twitch.tv/" } })
-
+   client.user.setActivity(`!yardım`, { //Düzenle burayı
+type: "STREAMING",
+url: "http://www.goldenhs.net"}) //Burayıda
+    .then(presence => console.log(`Your Status has been set to  ${presence.game ? presence.game.none : 'none'}`))
+    .catch(console.error);
 });
 
 client.on('message', async message => {
